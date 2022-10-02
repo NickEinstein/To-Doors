@@ -1,0 +1,33 @@
+.GridTable {
+}
+
+.GridTable__content {
+  @apply grid gap-4 md:grid-cols-3 pb-4 md:pb-6;
+}
+
+.GridTable__content__item {
+  max-height: 380px;
+  overflow: auto;
+  position: relative;
+}
+
+.GridTable__content__item__header {
+  top: 0;
+}
+
+.GridTable__content__item__body {
+  @apply p-4;
+}
+
+.GridTable__content__item__footer {
+  bottom: 0;
+}
+
+.GridTable__content__item__header,
+.GridTable__content__item__footer {
+  position: sticky;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  @apply bg-white px-4 py-3;
+}

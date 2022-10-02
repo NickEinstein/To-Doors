@@ -1,0 +1,80 @@
+.StandardTable {
+  overflow: auto;
+  width: 100%;
+  min-height: 300px;
+  max-height: calc(100vh - 250px);
+  background: inherit;
+}
+
+.StandardTable__table {
+  background: inherit;
+  width: 100%;
+}
+
+.StandardTable__table__thead {
+  top: 0;
+}
+
+.StandardTable__table__thead__tr {
+}
+
+.StandardTable__table__thead__tr__th {
+  position: relative;
+}
+
+.StandardTable__table__tfoot {
+  bottom: 47.7px;
+}
+
+.StandardTable__pagination {
+  bottom: 0;
+  height: 48px;
+  justify-content: flex-end;
+}
+
+.StandardTable__table__thead,
+.StandardTable__table__tfoot,
+.StandardTable__pagination {
+  @apply bg-inherit z-10 sticky;
+}
+
+.StandardTable__table__thead__tr__th,
+.StandardTable__table__tbody__tr__td,
+.StandardTable__table__tfoot__tr__th {
+  @apply p-2;
+  height: 48px;
+  text-align: left;
+}
+
+.StandardTable__table__thead__tr,
+.StandardTable__table__tbody__tr,
+.StandardTable__table__tfoot__tr {
+  @apply border-b border-solid border-gray-200;
+}
+
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+}
+
+.resizer.isResizing {
+  background: blue;
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .resizer {
+    opacity: 0;
+  }
+
+  *:hover > .resizer {
+    opacity: 1;
+  }
+}

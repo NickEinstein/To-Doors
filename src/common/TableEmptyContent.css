@@ -1,0 +1,11 @@
+.TableEmptyContent {
+  @apply flex flex-col items-center justify-center py-8 sticky left-0 right-0;
+}
+.TableEmptyContent__icon {
+  @apply text-secondary-light;
+  font-size: 100px;
+}
+
+.TableEmptyContent__text {
+  @apply font-bold;
+}
