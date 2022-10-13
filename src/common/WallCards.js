@@ -86,7 +86,7 @@ function WallCards(props) {
   // }
 
   return (
-    <div className="border relative">
+    <div className="relative">
       <Card
         className={
           props.rider
