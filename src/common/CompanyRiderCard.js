@@ -83,11 +83,11 @@ function WallCards(props) {
   return (
    
     <div className=''>
-      <Card className=' text-black text-center' sx={{ minWidth: 325, minHeight:120, backgroundColor:'#EBEBEB' }}>
+      <Card className=' text-black text-center' sx={{ minWidth: 280, minHeight:120, backgroundColor:'#EBEBEB' }}>
       <CardContent>
-      <div class="flex pb-2" style={{backGroundColor:'#EBEBEB'}}>
+      <div className="flex pb-2" style={{backGroundColor:'#EBEBEB'}}>
             <img src = {gigLogo}/>
-            <div class="ml-2 text-left" style={{backGroundColor:'#EBEBEB'}}>
+            <div className="ml-2 text-left" style={{backGroundColor:'#EBEBEB'}}>
             <p className='medium-size cardhead'>Name</p>
             <Typography variant='h6'>Taiwo Daniel</Typography>
             </div>
@@ -96,12 +96,12 @@ function WallCards(props) {
         <Divider />
 
         <div className='w-4/5 '>
-            <div class="flex justify-between text-left pt-2">
-                <div class=" " style={{backGroundColor:'#EBEBEB'}}>
+            <div className="flex justify-between text-left pt-2">
+                <div className=" " style={{backGroundColor:'#EBEBEB'}}>
                 <p className='medium-size cardhead'>Company</p>
                 <Typography className='text-sm font-bold' variant=''>GIG Logistics</Typography>
                 </div>
-                <div class="" style={{backGroundColor:'#EBEBEB'}}>
+                <div className="" style={{backGroundColor:'#EBEBEB'}}>
                 <p className='text-ssm cardhead'>Contact</p>
                 <Typography variant='' className='text-sm font-bold' >09013417032</Typography>
                 </div>
@@ -109,7 +109,7 @@ function WallCards(props) {
         </div>
 
         <div className='flex justify-between mt-3'>
-            <Button className='px-10 py-1 ' color='secondary' >Verify</Button>
+            <Button className='px-10 py-1 ' color='primary' >Verify</Button>
             <Button className='px-10 py-1 bg-transparent text-cardhead text-cardhead-border'>Decline</Button>
         </div>
         

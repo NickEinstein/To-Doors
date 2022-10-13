@@ -47,7 +47,10 @@ code {
 .background-table{
   background-color: #EBEBEB !important;
 }
-.css-l8ymep-MuiInputBase-input-MuiOutlinedInput-input{
+.css-46bh2p-MuiCardContent-root:last-child {
+    padding-bottom: 12px;
+}
+.home .css-l8ymep-MuiInputBase-input-MuiOutlinedInput-input{
 height: 2.7em !important;
 }
 
@@ -285,6 +288,11 @@ a{
 .border2b {
   border-bottom: 1px solid #5B0877B2;
 }
+.border3b {
+  border-bottom: 1px solid #989898;
+}
+
+
 
 .w-100 {
   width: 100%

@@ -7,13 +7,15 @@ import { useSnackbar } from "notistack";
 import PasswordTextField from "common/PasswordTextField";
 import { getTextFieldFormikProps } from "utils/FormikUtils";
 import useAuthUser from "hooks/useAuthUser";
+
 import { Navigate } from "react-router-dom";
 import { RouteEnum } from "constants/RouteConstants";
 import LoginHeader from "common/LoginHeader";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import toDoorLogo from "images/Ellipse 30.png";
+import leftInput from "images/attach-circle.png";
+import rightInput from "images/Vector.png";
 // import ManageCompanyCard from 'common/ManageCompanyCard'
 
 // import { RouteEnum } from "constants/RouteConstants";
@@ -30,7 +32,9 @@ import {
   Card,
   CardActions,
   CardContent,
+  Divider,
   Input,
+  InputAdornment,
   MenuItem,
   Rating,
   Select,
@@ -39,17 +43,17 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import WallCards from "common/WallCards";
-import ManageCompanyCard from "./ManageCompanyCard";
 import { RiArrowLeftSLine } from "react-icons/ri";
-import ManageCompaniesTable from "./ManageCompaniesTable";
 import NewWallCards from "common/NewWallCards";
 import ToDoorSearch from "common/ToDoorSearch";
+import { MdOutlineSearch } from "react-icons/md";
+import { borderRadius } from "@mui/system";
 
-function ManageCompanies(props) {
+function SupportChart({ setOpen, open }) {
   const [show, setShow] = useState(false);
   const handleShow = (event) => {
     setShow(!show);
-    console.log("john");
+    // console.log("john");
   };
   const history = useNavigate();
 
@@ -118,114 +122,115 @@ function ManageCompanies(props) {
 
   return (
     <div>
-      <ToDoorSearch />
-      {!show && (
-        <div>
-          <div className="flex justify-between my-7">
-            <ManageCompanyCard handleShow={handleShow} />
-            <ManageCompanyCard handleShow={handleShow} />
-            <ManageCompanyCard handleShow={handleShow} />
-          </div>
-          <div className="flex justify-between my-7">
-            <ManageCompanyCard handleShow={handleShow} />
-            <ManageCompanyCard handleShow={handleShow} />
-            <ManageCompanyCard handleShow={handleShow} />
-          </div>
-          <div className="flex justify-between my-7">
-            <ManageCompanyCard handleShow={handleShow} />
-            <ManageCompanyCard handleShow={handleShow} />
-            <ManageCompanyCard handleShow={handleShow} />
-          </div>
-        </div>
-      )}
-
-      {show && (
-        <div>
+      <div>
+        <div
+          onClick={handleShow}
+          className="flex items-center mb-2 cursor-pointer w-16 p-2"
+        >
           <div
-            onClick={handleShow}
-            className="flex items-center mb-8 cursor-pointer w-16 p-2"
+            style={{ border: "1px solid #494949" }}
+            className="border-solid w-5 mr-2 rounded h-5 flex justify-center items-center"
           >
-            <div
-              style={{ border: "1px solid #494949" }}
-              className="border-solid w-5 mr-2 rounded h-5 flex justify-center items-center"
-            >
-              <RiArrowLeftSLine
-                className=""
-                style={{ fontSize: "22px", color: "#494949" }}
-              />
-            </div>
-            <p style={{ color: "#494949" }} className="text-base">
-              Back
-            </p>
+            <RiArrowLeftSLine
+              className=""
+              style={{ fontSize: "22px", color: "#494949" }}
+            />
           </div>
+          <p
+            onClick={() => setOpen(!open)}
+            style={{ color: "#494949" }}
+            className="text-base"
+          >
+            Back
+          </p>
+        </div>
 
+        <div className="flex justify-between items-center">
           <div
             className="flex items-center"
             style={{ backGroundColor: "#1E1E1E" }}
           >
             <img src={gigLogo} />
             <Typography variant="h5" className="font-bold ml-4 ">
-              GIG LOGISTICS
+              Taiwo Daniel
             </Typography>
           </div>
-          <div className="flex ">
-            <div className="flex items-center  mt-8 border2 p-2">
-              <NewWallCards
-                dashboard={true}
-                small={true}
-                bigspace={true}
-                name="Riders"
-                count="20"
-              />
-              {/* <WallCards name='Total Raiders' count='116,019'/> */}
-              {/* <WallCards name='Rides in progress' count='13'/>
-              <WallCards name='Active vehicles' count='8'/> */}
-              <NewWallCards
-                dashboard={true}
-                small={true}
-                cutborder={true}
-                name="Earnings"
-                count="30,000"
-              />
-            </div>
-          </div>
-          <div className="flex justify-between  items-end">
-            <Typography
-              variant="h5"
-              className="font-bold mt-8 text-primary-main"
-              // text-blue-800
-            >
-              Riders
-            </Typography>
 
-            <div className="flex justify-between items-end">
-              <Autocomplete
-                // clearIcon={<p></p>}
-                // variant=''
-                className="mr-3"
-                // disablePortal
-                id="combo-box-demo"
-                options={top100Films}
-                sx={{ width: 200 }}
-                renderInput={(params) => <TextField {...params} />}
-              />
-              <Autocomplete
-                // disablePortal
-                id="combo-box-demo"
-                options={top100Films}
-                sx={{ width: 200 }}
-                renderInput={(params) => <TextField {...params} />}
-              />
-            </div>
-          </div>
-
-          {tableArray.map((e) => (
-            <ManageCompaniesTable tableArray={e} />
-          ))}
+          <Button variant="outlined">View Profile</Button>
         </div>
-      )}
+        <Divider className="my-4" />
+        <div className=" ">
+          <p className="text-center text-[#50555C]">Today Sept. 10th, 2022</p>
+        </div>
+      </div>
+      <div className="relative p-4 w-full">
+        <div className="">
+          <div>
+            <div className="  max-w-[25%] left-0 ">
+              <div className="flex">
+                <p
+                  style={{ borderRadius: "5px" }}
+                  className="px-4 py-1 bg-[#EBEBEB]"
+                >
+                  Hello
+                </p>
+              </div>
+              <p
+                className=" text-left"
+                style={{
+                  fontSize: "9px",
+                  color: "#767676",
+                }}
+              >
+                12:22pm
+              </p>
+            </div>
+            <div className=" ml-auto text-white max-w-[25%] left-0 ">
+              <p
+                style={{ borderRadius: "5px" }}
+                className="px-4 py-1 bg-[#037329]"
+              >
+                Good afternoon Taiwo How may we be of service to you.
+              </p>
+              <p
+                className=" text-right "
+                style={{
+                  fontSize: "9px",
+                  color: "#767676",
+                }}
+              >
+                12:22pm
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <TextField
+          className="w-full mt-12"
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="start">
+                <img
+                  className="cursor-pointer"
+                  style={{ width: "18px" }}
+                  src={rightInput}
+                />
+              </InputAdornment>
+            ),
+            startAdornment: (
+              <InputAdornment position="start">
+                <img
+                  className="cursor-pointer"
+                  style={{ width: "18px" }}
+                  src={leftInput}
+                />
+              </InputAdornment>
+            ),
+          }}
+        />
+      </div>
     </div>
   );
 }
 
-export default ManageCompanies;
+export default SupportChart;

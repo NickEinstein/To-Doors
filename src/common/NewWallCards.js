@@ -15,7 +15,6 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import toDoorLogo from "images/Ellipse 30.png";
 import background from "images/background.png";
-import gigLogo from "images/Ellipse 56.png";
 
 // import { RouteEnum } from "constants/RouteConstants";
 // import ReactDOM from 'react-dom';
@@ -31,14 +30,14 @@ import {
   CardActions,
   CardContent,
   Input,
-  Divider,
+  MenuItem,
   Select,
   TextField,
   Typography,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-function ManageCompanyCard(props) {
+function NewWallCards(props) {
   const [age, setAge] = React.useState("");
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -87,70 +86,63 @@ function ManageCompanyCard(props) {
   // }
 
   return (
-    <div className="">
-      <Card
-        className=" text-black text-center relative"
-        sx={{ minWidth: 255, minHeight: 120, backgroundColor: "#EBEBEB" }}
+    <div
+      className={"p-20"}
+      style={{
+        border: "none",
+        borderLeft: props.cutborder ? "1px solid #C4C4C4" : "none",
+      }}
+    >
+      <div
+        className={
+          props.rider
+            ? "riders-bg text-white text-center mr-3"
+            : props.plain
+            ? "plain-bg"
+            : props.green
+            ? "bg-primary-main text-white"
+            : props.big
+            ? "text-left"
+            : " text-white text-center"
+        }
+        sx={{
+          minWidth: props.big ? 220 : 155,
+          minHeight: props.big ? 160 : 120,
+        }}
       >
-        <CardContent className="">
-          <div
-            onClick={props.handleShow}
-            className="flex pb-2  cursor-pointer"
-            style={{ backGroundColor: "#EBEBEB" }}
-          >
-            <img src={gigLogo} />
-            <div
-              className="ml-2 text-left"
-              style={{ backGroundColor: "#EBEBEB" }}
+        <div className={props.bigspace?" pr-10":'px-5'}>
+          <div>
+            <Typography
+              className={
+                props.plain || props.green
+                  ? " text-center text-white"
+                  : props.dashboard
+                  ? "text-center text-primary-main "
+                  : "text-center text-primary-main font-bold"
+              }
+              sx={{ fontSize: 12 }}
             >
-              <Typography variant="h6">GIG Logistics</Typography>
-              <p className="medium-size cardhead">Apapa, Lagos</p>
-            </div>
+              {props.name || "Total Companies"}
+            </Typography>
           </div>
-
-          <Divider />
-
-          <div className="w-4/5 ">
-            <div className=" text-left pt-2">
-              <div className="">
-                <div className=" relative flex">
-                  <img
-                    className="absolute"
-                    style={{ width: "27px" }}
-                    src={gigLogo}
-                  />
-                  <img
-                    className="absolute"
-                    style={{ width: "27px", left: "20px" }}
-                    src={gigLogo}
-                  />
-                </div>
-                <div>
-                  <Typography className="ml-14 mt-1 font-bold text-sm">
-                    33 Riders
-                  </Typography>
-                </div>
-              </div>
-              <div className="mt-4 " style={{ backGroundColor: "#EBEBEB" }}>
-                <div>
-                  <Typography className="text-sm font-bold text-cardhead-blue">
-                    NGN 20,000 Earned
-                  </Typography>
-                  <p className="medium-size cardhead">Since Aug 29, 2022</p>
-                </div>
-
-                <p className="text-lg cardhead absolute bottom-3 opacity-50 right-2">
-                  ...
-                </p>
-              </div>
-            </div>
+          <div>
+            <Typography
+              variant={props.small ? "h4" : "h2"}
+              className={
+                props.green
+                  ? "text-white text-center font-bold"
+                  : "text-center font-bold text-primary-main"
+              }
+            >
+              {props.count || 20}
+            </Typography>
           </div>
-        </CardContent>
+        </div>
 
         {/* <Button size="small">Learn More</Button> */}
-      </Card>
+      </div>
     </div>
   );
 }
 
-export default ManageCompanyCard;
+export default NewWallCards;

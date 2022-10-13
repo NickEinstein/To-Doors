@@ -16,10 +16,12 @@ export function customizeComponents(theme) {
       ...theme.palette,
       primary: {
         lighter: "#C1F6C15E",
-        main: "#006600",
+        // main: "#006600",
+        main: "#0C3BAA",
       },
       secondary: {
         main: "#000051",
+        light: "#646464",
       },
       tetiary: {
         main: "#5B0877",
@@ -30,14 +32,8 @@ export function customizeComponents(theme) {
       buttonhead: {
         main: "#EBEBEB",
       },
-      
-
-      
-
-      
     },
 
-    
     breakpoints: {
       values: {
         xs: 0,
@@ -53,7 +49,7 @@ export function customizeComponents(theme) {
       fontSize: 12,
       button: {
         textTransform: "none",
-        width: 'w-28'
+        width: "w-28",
       },
     },
     components: {
@@ -95,16 +91,15 @@ export function customizeComponents(theme) {
         },
       },
       MuiTextField: {
-        
         // defaultProps: {
         //   size: "small",
-          
+
         // },
         styleOverrides: {
           root: ({ theme, ownerState }) => ({
             // "&.MuiInputBase-formControl": {
-              borderRadius: 24,
-              // minWidth:295
+            // borderRadius: 24,
+            // minWidth:295
             // },
           }),
         },
@@ -118,8 +113,8 @@ export function customizeComponents(theme) {
         },
         styleOverrides: {
           root: ({ theme, ownerState }) => ({
-              borderRadius: 24,
-              // backgroundColor: red
+            // borderRadius: 24,
+            // backgroundColor: red
           }),
         },
       },
@@ -129,7 +124,7 @@ export function customizeComponents(theme) {
         },
         styleOverrides: {
           root: ({ theme, ownerState }) => ({
-            borderRadius: 24,
+            // borderRadius: 24,
           }),
         },
       },
@@ -137,8 +132,8 @@ export function customizeComponents(theme) {
         styleOverrides: {
           root: ({ theme, ownerState }) => ({
             // "&.MuiInputBase-formControl": {
-              borderRadius: 24,
-              // minWidth:295
+            borderRadius: 24,
+            // minWidth:295
             // },
           }),
         },

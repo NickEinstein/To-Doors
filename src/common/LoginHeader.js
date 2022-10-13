@@ -16,18 +16,36 @@ const LoginHeader = (prop) => {
       history('/');
   }
     return (
-        <div className='flex '>
-           <div class="flex items-center">
-               <div className='flex relative items-center' >
-                    <img  src={toDoorLogo}  style={{width:'70px'}}   alt ='softwork logo' className='cursor-pointer' onClick={redirect}/>
-                    <Typography variant='h4'  className='absolute font-bold' style={{marginLeft:'16px', color:'white'}}>TO</Typography>
-               </div>
-               <div>
-               <Typography variant='h4'  className='font-bold' style={{ color:'green', marginLeft:'1px'}}>-Door</Typography>
-               
-               </div>
-           </div>
+      <div className="flex ">
+        <div className="flex items-center">
+          <div className="flex relative items-center">
+            <img
+              src={toDoorLogo}
+              style={{ width: "70px" }}
+              alt="softwork logo"
+              className="cursor-pointer"
+              onClick={redirect}
+            />
+            <Typography
+              variant="h4"
+              className="absolute font-bold"
+              style={{ marginLeft: "16px", color: "white" }}
+            >
+              TO
+            </Typography>
+          </div>
+          <div>
+            <Typography
+              variant="h4"
+              className="font-bold text-primary-main ml-1"
+              
+            //   style={{ color: "0C3BAA", marginLeft: "1px" }}
+            >
+              -Door
+            </Typography>
+          </div>
         </div>
-    )
+      </div>
+    );
 }
 export default LoginHeader;

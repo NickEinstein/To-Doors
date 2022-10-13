@@ -102,7 +102,7 @@ const tableArray = [
   return (
    
     <div>
-         <div class="flex items-center" style={{backGroundColor:'#1E1E1E'}}>
+         <div classN="flex items-center" style={{backGroundColor:'#1E1E1E'}}>
             <img src = {gigLogo}/>
             <Typography  variant='h5'  className='font-bold ml-4 ' >
            GIG LOGISTICS
@@ -123,7 +123,7 @@ const tableArray = [
             </Typography>
 
                     { tableArray.map((e)=>
-                    <div class="mt-4 flex border2 background-table min-h-[50%]">
+                    <div className="mt-4 flex border2 background-table min-h-[50%]">
 
                         <div className='w-1/2  p-3 '>
                             <img src = {gigLogo} className='rounded-full'/>
