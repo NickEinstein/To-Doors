@@ -123,7 +123,7 @@ function ManageRiders(props) {
           GIG LOGISTICS
         </Typography>
       </div> */}
-      <div className="flex justify-between items-end mr-3 mt-12 w-3/6">
+      <div className="flex items-end mr-3 mt-12 w-3/6">
         <div className="mr-4">
           <WallCards
             className="mr-3"

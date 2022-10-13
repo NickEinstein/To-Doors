@@ -411,7 +411,7 @@ function Trips(props) {
                   <div className="w-[11.11%]  px-3 py-3  border3b text-center">
                     -
                   </div>
-                  <div className="w-[11.11%]  px-3 py-3  border3b text-center">
+                  <div className="w-[15%]  px-3 py-3  border3b text-center">
                     <Button
                       onClick={() => {
                         handleShow(row);
